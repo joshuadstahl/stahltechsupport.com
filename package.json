@@ -31,6 +31,7 @@
     "astro-seo": "^1.1.0",
     "limax": "4.1.0",
     "lodash.merge": "^4.6.2",
+    "posthog-js": "^1.374.3",
     "unpic": "^4.2.2"
   },
   "devDependencies": {

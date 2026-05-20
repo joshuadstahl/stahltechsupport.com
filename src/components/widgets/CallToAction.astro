@@ -56,26 +56,3 @@ const {
     }
   </div>
 </WidgetWrapper>
-
-<script is:inline>
-  function setupCtaTracking() {
-    const ctaSection = document.querySelector('.max-w-3xl.mx-auto.text-center.p-6.rounded-md');
-    if (!ctaSection) return;
-    const buttons = ctaSection.querySelectorAll('a, button');
-    buttons.forEach(function (btn) {
-      btn.removeEventListener('click', handleCtaClick);
-      btn.addEventListener('click', handleCtaClick);
-    });
-  }
-
-  function handleCtaClick(event) {
-    const btn = event.currentTarget;
-    window.posthog?.capture('cta_clicked', {
-      button_text: btn.textContent?.trim(),
-      button_href: btn.getAttribute('href'),
-    });
-  }
-
-  document.addEventListener('DOMContentLoaded', setupCtaTracking);
-  document.addEventListener('astro:page-load', setupCtaTracking);
-</script>

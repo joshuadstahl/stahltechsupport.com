@@ -18,7 +18,7 @@ const {
 } = Astro.props;
 ---
 
-<section class="relative md:-mt-[76px] not-prose" data-hero-section {...id ? { id } : {}}>
+<section class="relative md:-mt-[76px] not-prose" {...id ? { id } : {}}>
   <div class="absolute inset-0 pointer-events-none" aria-hidden="true">
     <slot name="bg">
       {bg ? <Fragment set:html={bg} /> : null}
@@ -99,26 +99,3 @@ const {
     </div>
   </div>
 </section>
-
-<script is:inline>
-  function setupHeroTracking() {
-    const heroSection = document.querySelector('[data-hero-section]');
-    if (!heroSection) return;
-    const buttons = heroSection.querySelectorAll('a, button');
-    buttons.forEach(function (btn) {
-      btn.removeEventListener('click', handleHeroCtaClick);
-      btn.addEventListener('click', handleHeroCtaClick);
-    });
-  }
-
-  function handleHeroCtaClick(event) {
-    const btn = event.currentTarget;
-    window.posthog?.capture('hero_cta_clicked', {
-      button_text: btn.textContent?.trim(),
-      button_href: btn.getAttribute('href'),
-    });
-  }
-
-  document.addEventListener('DOMContentLoaded', setupHeroTracking);
-  document.addEventListener('astro:page-load', setupHeroTracking);
-</script>

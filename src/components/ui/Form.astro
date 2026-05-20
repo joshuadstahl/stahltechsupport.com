@@ -85,19 +85,3 @@ const { inputs, textarea, disclaimer, button = 'Contact us', description = '' } 
     )
   }
 </form>
-
-<script is:inline>
-  function setupContactForm() {
-    const form = document.querySelector('form');
-    if (!form) return;
-    form.removeEventListener('submit', handleContactSubmit);
-    form.addEventListener('submit', handleContactSubmit);
-  }
-
-  function handleContactSubmit(_event) {
-    window.posthog?.capture('contact_form_submitted');
-  }
-
-  document.addEventListener('DOMContentLoaded', setupContactForm);
-  document.addEventListener('astro:page-load', setupContactForm);
-</script>

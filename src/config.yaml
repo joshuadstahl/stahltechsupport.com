@@ -1,6 +1,6 @@
 site:
-  name: AstroWind
-  site: 'https://astrowind.vercel.app'
+  name: Stahl Tech Support Company
+  site: 'https://static.stahltechsupport.com'
   base: '/'
   trailingSlash: false
 
@@ -9,14 +9,14 @@ site:
 # Default SEO metadata
 metadata:
   title:
-    default: AstroWind
-    template: '%s — AstroWind'
-  description: "\U0001F680 Suitable for Startups, Small Business, Sass Websites, Professional Portfolios, Marketing Websites, Landing Pages & Blogs."
+    default: Stahl Tech Support Company
+    template: '%s — Stahl Tech Support Company'
+  description: "\U0001F680 Tech help for individuals and businesses alike. We'll help you with your computers, phones, tablets, printers, TVs, Wi-Fi, smart devices, and more!"
   robots:
     index: true
     follow: true
   openGraph:
-    site_name: AstroWind
+    site_name: Stahl Tech Support Company
     images:
       - url: '~/assets/images/default.png'
         width: 1200
@@ -62,11 +62,6 @@ apps:
 
     isRelatedPostsEnabled: true
     relatedPostsCount: 4
-
-analytics:
-  vendors:
-    googleAnalytics:
-      id: null # or "G-XXXXXXXXXX"
 
 ui:
   theme: 'system' # Values: "system" | "light" | "dark" | "light:only" | "dark:only"

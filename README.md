@@ -13,7 +13,6 @@
 - ✅ **Image Optimization** (using new **Astro Assets** and **Unpic** for Universal image CDN).
 - ✅ Generation of **project sitemap** based on your routes.
 - ✅ **Open Graph tags** for social media sharing.
-- ✅ **Analytics** built-in Google Analytics, and Splitbee integration.
 
 <br>
 
